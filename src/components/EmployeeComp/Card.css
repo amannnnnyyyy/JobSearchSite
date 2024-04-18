@@ -1,0 +1,15 @@
+
+.card {
+    opacity: 0.8; /* Initial opacity */
+    transition: opacity 0.3s ease;
+  }
+  
+  .card:hover {
+    opacity: 1; /* Hide on hover */
+    cursor: default; /* Remove pointer cursor */
+    color: green;
+    border-color: green;
+    border-style:groove;
+    transform: scale(1.065);
+    
+  }
