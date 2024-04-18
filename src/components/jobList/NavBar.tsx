@@ -13,7 +13,7 @@ const NavBar = () => {
             <a className="flex flex-shrink-0 items-center mr-4" href="/index.html">
               <img
                 className="h-10 w-auto"
-                src="images/logo.png"
+                src="../../../images/logo.png"
                 alt="React Jobs"
               />
               <span className="hidden md:block text-white text-2xl font-bold ml-2"
