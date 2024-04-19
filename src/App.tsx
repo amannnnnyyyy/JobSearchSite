@@ -8,12 +8,13 @@ import NavBar from "./components/jobList/NavBar";
 import ViewAllJobs from "./components/jobList/ViewAllJobs";
 import { ListGroup } from "./components/ListGroup";
 import { Hey } from "./Hey";
-import { BrowserRouter as Router, Route, Routes, BrowserRouter} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, BrowserRouter,createBrowserRouter,createRoutesFromElements,RouterProvider} from "react-router-dom";
+import HomePage from "./components/jobList/pages/HomePage";
+import MainLayout from "./components/jobList/layouts/MainLayout";
+import JobsPage from "./components/jobList/pages/JobsPage";
 
 
 function App(){
-  const heroTitle = 'Developer Jobs';
-  const heroSubTitle = 'Find the programming job that fits your skillset!';
 
   const items = [
     "A simple default list group item",
@@ -23,22 +24,18 @@ function App(){
     "A simple light list group item","A simple dark list group item"
 ]
 
-  return (
-    <>
-    <NavBar />
-    <Hero title={heroTitle} subTitle={heroSubTitle}/>
-    <HomeCards />
-    <JobListings />
-    <ViewAllJobs />
-   
-      <BrowserRouter>
-        <Routes>
-        <Route path="/employee" element={<Total/>} />
-          <Route path="/list" element={<ListGroup items={items} heading="List"/>} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  )
+const router = createBrowserRouter(
+  createRoutesFromElements(
+
+    <Route path = "/" element={<MainLayout />}>
+        <Route index element={<HomePage/>}/>
+        <Route path = "/jobs" element={<JobsPage/>}/>
+    </Route>
+  
+)
+);
+
+  return <RouterProvider router={router}/>
 }
 
 export default App;
