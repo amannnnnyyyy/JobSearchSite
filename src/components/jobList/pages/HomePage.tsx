@@ -11,7 +11,7 @@ const HomePage = () => {
     <div>
       <Hero title={heroTitle} subTitle={heroSubTitle}/>
       <HomeCards />
-      <JobListings />
+      <JobListings isHome={true}/>
       <ViewAllJobs />
     </div>
   )
