@@ -14,6 +14,21 @@ import MainLayout from "./components/jobList/layouts/MainLayout";
 import JobsPage from "./components/jobList/pages/JobsPage";
 import NotFoundPage from "./components/jobList/pages/NotFoundPage";
 import JobPage, { jobLoader } from "./components/jobList/pages/JobPage";
+import AddJobPage from "./components/jobList/pages/AddJobPage";
+
+interface Job {
+  title: string;
+  type: string;
+  location: string;
+  description: string;
+  salary: string;
+  company:{
+    companyName: string;
+    companyDescription: string;
+    contactEmail: string;
+    contactPhone: string;
+  },
+}
 
 
 function App(){
@@ -26,6 +41,21 @@ function App(){
     "A simple light list group item","A simple dark list group item"
 ]
 
+const addJob:  (job: Job) => void = async (job) => {
+  const res = await fetch('/api/jobs',
+    {
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify(job),
+    }
+
+  );
+  return;
+};
+  
+
 const router = createBrowserRouter(
   createRoutesFromElements(
 
@@ -33,6 +63,9 @@ const router = createBrowserRouter(
         <Route index element={<HomePage/>}/>
         <Route path = "/jobs" element={<JobsPage/>}/>
         <Route path = "/jobs/:id" element={<JobPage/>} loader={jobLoader}/>
+        <Route path = "/edit-job/:id" element={<AddJobPage addJobSubmit={addJob}/>} loader={jobLoader}/>
+        <Route path = "/add-job" element={<AddJobPage addJobSubmit={addJob}/>}/>
+        
         <Route path="*" element={<NotFoundPage/>}/>
     </Route>
   

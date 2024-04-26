@@ -1,31 +1,33 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useLoaderData } from 'react-router-dom';
 import Spinner from '../spinner';
 import { FaArrowLeft, FaMapMarker } from 'react-icons/fa';
 
+
 const JobPage = () => {
     //with useEffect
-    const {id} = useParams();
-     const [job,setJob]=useState(null);
-    const [loading,setLoading] = useState(true);
+    //const {id} = useParams();
+    const job = useLoaderData();
+    //  const [job,setJob]=useState(null);
+   const [loading,setLoading] = useState(false);
 
     function onDeleteClick(id: any): void {
         throw new Error('Function not implemented.');
     }
 
-    useEffect(() =>{
-        const fetchJob = async()=>{
+    // useEffect(() =>{
+    //     const fetchJob = async()=>{
             
-            const apiURl = `/api/jobs/${id}`;
-            try{
-                const response = await fetch(apiURl);
-                const data = await response.json();
-                setJob(data);
-                console.log(data);
-            }catch(error){console.log("Error fetching data : ",error);} finally{setLoading(false);}
-        }
-        fetchJob();
-    },[]);
+    //         const apiURl = `/api/jobs/${id}`;
+    //         try{
+    //             const response = await fetch(apiURl);
+    //             const data = await response.json();
+    //             setJob(data);
+    //             console.log(data);
+    //         }catch(error){console.log("Error fetching data : ",error);} finally{setLoading(false);}
+    //     }
+    //     fetchJob();
+    // },[]);
 
   return (
     loading?<Spinner loading={loading}/>:(
@@ -49,7 +51,7 @@ const JobPage = () => {
                   <div className='text-gray-500 mb-4'>{job.type}</div>
                   <h1 className='text-3xl font-bold mb-4'>{job.title}</h1>
                   <div className='text-gray-500 mb-4 flex align-middle justify-center md:justify-start'>
-                    <FaMapMarker className='text-orange-700 mr-1' />
+                    <FaMapMarker className='text-orange-700 mr-1 mt-1' />
                     <p className='text-orange-700'>{job.location}</p>
                   </div>
                 </div>
