@@ -13,6 +13,7 @@ import HomePage from "./components/jobList/pages/HomePage";
 import MainLayout from "./components/jobList/layouts/MainLayout";
 import JobsPage from "./components/jobList/pages/JobsPage";
 import NotFoundPage from "./components/jobList/pages/NotFoundPage";
+import JobPage, { jobLoader } from "./components/jobList/pages/JobPage";
 
 
 function App(){
@@ -31,6 +32,7 @@ const router = createBrowserRouter(
     <Route path = "/" element={<MainLayout />}>
         <Route index element={<HomePage/>}/>
         <Route path = "/jobs" element={<JobsPage/>}/>
+        <Route path = "/jobs/:id" element={<JobPage/>} loader={jobLoader}/>
         <Route path="*" element={<NotFoundPage/>}/>
     </Route>
   
