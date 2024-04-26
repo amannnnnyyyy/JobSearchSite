@@ -83,20 +83,6 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
-    },
-    {
-      "id": "b6e1",
-      "title": "Coder",
-      "type": "Full-Time",
-      "location": "Addis",
-      "description": "You code",
-      "salary": "Over $200K",
-      "company": {
-        "name": "EAII",
-        "description": "We code",
-        "contactEmail": "Somewhere@gmail.com",
-        "contactPhone": "0919202342"
-      }
     }
   ]
 }

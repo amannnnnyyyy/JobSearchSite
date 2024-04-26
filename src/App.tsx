@@ -41,6 +41,8 @@ function App(){
     "A simple light list group item","A simple dark list group item"
 ]
 
+//add new job
+
 const addJob:  (job: Job) => void = async (job) => {
   const res = await fetch('/api/jobs',
     {
@@ -56,16 +58,43 @@ const addJob:  (job: Job) => void = async (job) => {
 };
   
 
+//delete job
+const deleteJob = async (id)=>{
+  const res = await fetch(`/api/jobs/${id}`,
+    {
+      method:'DELETE',
+     
+    }
+
+  );
+  return;
+}
+
+
+//edit job
+const editJob:  (job: Job) => void = async (job) => {
+  const res = await fetch(`/api/jobs/${id}`,
+    {
+      method:'PUT',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify(job),
+    }
+
+  );
+  return;
+};
+
 const router = createBrowserRouter(
   createRoutesFromElements(
 
     <Route path = "/" element={<MainLayout />}>
         <Route index element={<HomePage/>}/>
         <Route path = "/jobs" element={<JobsPage/>}/>
-        <Route path = "/jobs/:id" element={<JobPage/>} loader={jobLoader}/>
+        <Route path = "/jobs/:id" element={<JobPage deleteJob={deleteJob} editJob={editJob}/>} loader={jobLoader}/>
         <Route path = "/edit-job/:id" element={<AddJobPage addJobSubmit={addJob}/>} loader={jobLoader}/>
         <Route path = "/add-job" element={<AddJobPage addJobSubmit={addJob}/>}/>
-        
         <Route path="*" element={<NotFoundPage/>}/>
     </Route>
   

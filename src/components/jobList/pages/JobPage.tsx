@@ -1,19 +1,38 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams, useLoaderData } from 'react-router-dom';
+import { Link, useParams, useLoaderData, useNavigate } from 'react-router-dom';
 import Spinner from '../spinner';
 import { FaArrowLeft, FaMapMarker } from 'react-icons/fa';
 
+interface id{ 
+    id: number;
+}
 
-const JobPage = () => {
+const JobPage = ({deleteJob,editJob}) => {
     //with useEffect
-    //const {id} = useParams();
+    const {id} = useParams();
     const job = useLoaderData();
     //  const [job,setJob]=useState(null);
    const [loading,setLoading] = useState(false);
+    const navigate = useNavigate();
 
-    function onDeleteClick(id: any): void {
-        throw new Error('Function not implemented.');
+    const onDeleteClick = (job:id):void=> {
+      const confirm = window.confirm('Are you sure you want to delete')
+
+      if (!confirm) return;
+        deleteJob(job);
+        navigate('/jobs')
+       //throw new Error('Function not implemented.');
     }
+
+    const onEditClick = (job:id):void=> {
+      const confirm = window.confirm('Are you sure you want to edit')
+
+      if (!confirm) return;
+        editJob(job);
+        navigate('/jobs')
+       //throw new Error('Function not implemented.');
+    }
+    
 
     // useEffect(() =>{
     //     const fetchJob = async()=>{
@@ -101,6 +120,7 @@ const JobPage = () => {
                   <Link
                     to={`/edit-job/${job.id}`}
                     className='bg-indigo-500 hover:bg-indigo-600 text-white text-center font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block'
+            
                   >
                     Edit Job
                   </Link>
