@@ -1,7 +1,7 @@
 import React from 'react'
 import { RingLoader } from 'react-spinners'
 
-const Spinner = ({loading}) => {
+const Spinner = ({loading}:{loading:boolean}) => {
     const override={
         display:'block',
         margin:'100px auto'

@@ -1,12 +1,23 @@
 import React, { FormEvent, useState } from 'react'
 import { useLoaderData, useNavigate, useParams } from 'react-router-dom'
 import { toast } from 'react-toastify';
-
+interface Job{
+  id: number;
+  title: string;
+  type: string;
+  description: string;
+  location: string;
+  salary: string;
+  company: {
+    name: string;
+    description: string;
+    contactEmail: string;
+    contactPhone: string;
+  }
+}
 
 const EditJobPage = ({editJobSubmit}) => {
-     
-
-    const  job = useLoaderData();
+    const  job:Job = useLoaderData() as Job;
     const [title, setTitle] = useState(job.title);
     const [type, setType] = useState(job.type);
     const [location, setLocation] = useState(job.location);

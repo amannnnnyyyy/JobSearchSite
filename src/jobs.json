@@ -1,9 +1,11 @@
 {
   "jobs": [
+ 
     {
       "id": "1",
       "title": "Senior React Developer",
       "type": "Full-Time",
+      "image":"https://buffer.com/library/content/images/2023/10/free-images.jpg",
       "description": "We are seeking a talented Front-End Developer to join our team in Boston, MA. The ideal candidate will have strong skills in HTML, CSS, and JavaScript, with experience working with modern JavaScript frameworks such as React or Angular.",
       "location": "Boston, MA",
       "salary": "$70K - $80K",
@@ -19,6 +21,7 @@
       "title": "Front-End Engineer (React & Redux)",
       "type": "Full-Time",
       "location": "Miami, FL",
+      "image":"https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
       "description": "Join our team as a Front-End Developer in sunny Miami, FL. We are looking for a motivated individual with a passion for crafting beautiful and responsive web applications. Experience with UI/UX design principles and a strong attention to detail are highly desirable.",
       "salary": "$70K - $80K",
       "company": {
@@ -31,8 +34,9 @@
     {
       "id": "3",
       "title": "React.js Dev",
-      "type": "Full-Time",
+      "type": "Internship",
       "location": "Brooklyn, NY",
+      "image":"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
       "description": "Are you passionate about front-end development? Join our team in vibrant Brooklyn, NY, and work on exciting projects that make a difference. We offer competitive compensation and a collaborative work environment where your ideas are valued.",
       "salary": "$70K - $80K",
       "company": {
@@ -46,6 +50,7 @@
       "id": "4",
       "title": "React Front-End Developer",
       "type": "Part-Time",
+      "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9bLg1NQ7hxBmxr6mbk1fkQGv-a6f8QskCSmZlTK-3fg&s",
       "description": "Join our team as a Part-Time Front-End Developer in beautiful Pheonix, AZ. We are looking for a self-motivated individual with a passion for creating engaging user experiences. This position offers flexible hours and the opportunity to work remotely.",
       "location": "Pheonix, AZ",
       "salary": "$60K - $70K",
@@ -60,6 +65,7 @@
       "id": "5",
       "title": "Full Stack React Developer",
       "type": "Full-Time",
+      "image":"https://pixlr.com/images/index/ai-image-generator-one.webp",
       "description": "Exciting opportunity for a Full-Time Front-End Developer in bustling Atlanta, GA. We are seeking a talented individual with a passion for building elegant and scalable web applications. Join our team and make an impact!",
       "location": "Atlanta, GA",
       "salary": "$90K - $100K",
@@ -74,6 +80,7 @@
       "id": "6",
       "title": "React Native Developer",
       "type": "Full-Time",
+      "image":"https://static.gettyimages.com/display-sets/creative-landing/images/GettyImages-1448734171.jpg",
       "description": "Join our team as a Front-End Developer in beautiful Portland, OR. We are looking for a skilled and enthusiastic individual to help us create innovative web solutions. Competitive salary and great benefits package available.",
       "location": "Portland, OR",
       "salary": "$100K - $110K",
@@ -86,16 +93,17 @@
     },
     {
       "id": "5fb5",
-      "title": "SpringBoot Developer",
-      "type": "Remote",
-      "location": "React",
-      "description": "interface Job {\n  id: string;\n  title: string;\n  type: string;\n  location: string;\n  description: string;\n  salary: string;\n  company:{\n    companyName: string;\n    companyDescription: string;\n    contactEmail: string;\n    contactPhone: string;\n  },\n}",
-      "salary": "Under $50K",
+      "title": "Bontu Moha Abdisa",
+      "type": "Part-Time",
+      "location": "ReactJs",
+      "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGibaggkS0JqYFpMp1M2Z-sqMznir-nylIoaxQ_ghWYw&s",
+      "description": "editing is done correctly",
+      "salary": "$90K - 100K",
       "company": {
-        "name": "Angular",
+        "name": "AngularJs",
         "description": "Python",
-        "contactEmail": "vite@gpt.vue",
-        "contactPhone": "0919202342"
+        "contactEmail": "bonamoha@gmail.com",
+        "contactPhone": "0922482352"
       }
     }
   ]
