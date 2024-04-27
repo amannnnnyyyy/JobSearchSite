@@ -11,10 +11,10 @@
 
  This project has a json file named jobs.json in the src folder. I have prepared that as a sample to
  view the project without having to build the back-end from the ground up.
-    By running the command 
+    
+ # By running the command 
   - npm run server
-
-you can get the json mock server which acts as a back-end.
+ # you can get the json mock server which acts as a back-end.
     
  This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
