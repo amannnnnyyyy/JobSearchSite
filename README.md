@@ -13,9 +13,10 @@
  view the project without having to build the back-end from the ground up.
     
  # Running The Back-End
+ ---
  By running the command 
   - npm run server
- you can get the json mock server which acts as a back-end.
+you can get the json mock server which acts as a back-end.
     
  This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
