@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams, useLoaderData, useNavigate } from 'react-router-dom';
 import Spinner from '../spinner';
 import { FaArrowLeft, FaMapMarker } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 interface id{ 
     id: number;
@@ -20,6 +21,7 @@ const JobPage = ({deleteJob,editJob}) => {
 
       if (!confirm) return;
         deleteJob(job);
+        toast.success('Job deleted successfully');
         navigate('/jobs')
        //throw new Error('Function not implemented.');
     }
@@ -29,6 +31,7 @@ const JobPage = ({deleteJob,editJob}) => {
 
       if (!confirm) return;
         editJob(job);
+        toast.success('Job edited successfully');
         navigate('/jobs')
        //throw new Error('Function not implemented.');
     }

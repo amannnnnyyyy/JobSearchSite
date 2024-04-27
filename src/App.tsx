@@ -15,8 +15,10 @@ import JobsPage from "./components/jobList/pages/JobsPage";
 import NotFoundPage from "./components/jobList/pages/NotFoundPage";
 import JobPage, { jobLoader } from "./components/jobList/pages/JobPage";
 import AddJobPage from "./components/jobList/pages/AddJobPage";
+import EditJobPage from "./components/jobList/pages/EditJobPage";
 
 interface Job {
+  id: string;
   title: string;
   type: string;
   location: string;
@@ -59,7 +61,7 @@ const addJob:  (job: Job) => void = async (job) => {
   
 
 //delete job
-const deleteJob = async (id)=>{
+const deleteJob = async (id:Job["id"])=>{
   const res = await fetch(`/api/jobs/${id}`,
     {
       method:'DELETE',
@@ -73,7 +75,7 @@ const deleteJob = async (id)=>{
 
 //edit job
 const editJob:  (job: Job) => void = async (job) => {
-  const res = await fetch(`/api/jobs/${id}`,
+  const res = await fetch(`/api/jobs/${job.id}`,
     {
       method:'PUT',
       headers:{
@@ -93,7 +95,7 @@ const router = createBrowserRouter(
         <Route index element={<HomePage/>}/>
         <Route path = "/jobs" element={<JobsPage/>}/>
         <Route path = "/jobs/:id" element={<JobPage deleteJob={deleteJob} editJob={editJob}/>} loader={jobLoader}/>
-        <Route path = "/edit-job/:id" element={<AddJobPage addJobSubmit={addJob}/>} loader={jobLoader}/>
+        <Route path = "/edit-job/:id" element={<EditJobPage editJobSubmit={editJob}/>} loader={jobLoader}/>
         <Route path = "/add-job" element={<AddJobPage addJobSubmit={addJob}/>}/>
         <Route path="*" element={<NotFoundPage/>}/>
     </Route>

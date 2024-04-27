@@ -83,6 +83,20 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "5fb5",
+      "title": "SpringBoot Developer",
+      "type": "Remote",
+      "location": "React",
+      "description": "interface Job {\n  id: string;\n  title: string;\n  type: string;\n  location: string;\n  description: string;\n  salary: string;\n  company:{\n    companyName: string;\n    companyDescription: string;\n    contactEmail: string;\n    contactPhone: string;\n  },\n}",
+      "salary": "Under $50K",
+      "company": {
+        "name": "Angular",
+        "description": "Python",
+        "contactEmail": "vite@gpt.vue",
+        "contactPhone": "0919202342"
+      }
     }
   ]
 }
