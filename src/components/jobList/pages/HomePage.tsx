@@ -3,13 +3,12 @@ import Hero from '../Hero'
 import HomeCards from '../HomeCards';
 import JobListings from '../JobListings';
 import ViewAllJobs from '../ViewAllJobs';
+import Collapsable from '../Collapsable';
 
 const HomePage = () => {
-    const heroTitle = 'Developer Jobs';
-  const heroSubTitle = 'Find the programming job that fits your skillset!';
-  return (
+     return (
     <div>
-      <Hero title={heroTitle} subTitle={heroSubTitle}/>
+      <Collapsable/>
       <HomeCards />
       <JobListings isHome={true}/>
       <ViewAllJobs />
