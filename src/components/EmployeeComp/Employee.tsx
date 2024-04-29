@@ -49,7 +49,7 @@ function Emp({photoPath,firstName,employeeId}:Employee) {
   return (
     <>
     {photos.map}
-    <NavBar firstName={names} employeeId={''} photoPath={''} fatherName={''} grandFName={''} employeeStatus={"/home/aman/Documents/React/first-react-app/src/components/EmployeeComp/Employee".ACTIVE} courses={[]} dateOfBirth={undefined} registeredAt={undefined}/>
+    <NavBar firstName={names} employeeId={''} photoPath={''} fatherName={''} grandFName={''} employeeStatus={EmployeeStatus.ACTIVE} courses={[]} dateOfBirth={new Date} registeredAt={new Date}/>
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent:'center' }}>
     {photos.map((details,index)=>(
         <Card key={index} photoPath={details.url} firstName={details.name} employeeId={details.id} 

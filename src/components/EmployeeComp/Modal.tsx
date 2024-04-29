@@ -10,7 +10,7 @@ function Modal({ onClose, onSubmit, children }) {
     onClose && onClose(); // Call the optional onClose function
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: { preventDefault: () => void; target: HTMLFormElement | undefined; }) => {
     event.preventDefault(); // Prevent default form submission behavior
     onSubmit && onSubmit(new FormData(event.target)); // Call the optional onSubmit function with form data
   };

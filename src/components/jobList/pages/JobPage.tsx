@@ -73,7 +73,7 @@ const JobPage = ({deleteJob,editJob}:any) => {
                 <div className='bg-white p-6 rounded-lg shadow-md text-center md:text-left'>
                   <div className='text-gray-500 mb-4'>{job.type}</div>
                   <h1 className='text-3xl font-bold mb-4'>{job.title}</h1>
-                  <div className="d-flex justify-content-center align-items-center" style={{ width: '350px', height: '300px' }}>
+      <div className="d-flex justify-content-center align-items-center" style={{ width: '350px', height: '300px' }}>
   <Image
     className='image zoom-in-hover'
     src={job.image}
